@@ -93,7 +93,7 @@ public class Colosseum {
             if (attackPoints < 1  || attackPoints <= MAX_HIT_POINTS - 1) {
                 validHitPoints = true;
             } else{
-                System.out.println("Sorry. Attack points must be between 1 and 40");
+                System.out.println("Sorry. Attack points must be between 1 and 49");
             }
         }
         System.out.println("Enter your defense level (1-3)");
