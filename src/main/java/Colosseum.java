@@ -90,14 +90,22 @@ public class Colosseum {
         boolean validAttackPoints = false;
         while (validAttackPoints == false) {
             int attackPoints = myScan.nextInt();
-            if (attackPoints < 1  || attackPoints <= MAX_HIT_POINTS - 1) {
+            if (attackPoints > 1  && attackPoints <= MAX_HIT_POINTS - 1) {
                 validHitPoints = true;
             } else{
                 System.out.println("Sorry. Attack points must be between 1 and 49");
             }
         }
         System.out.println("Enter your defense level (1-3)");
-        int defense = myScan.nextInt();
+        boolean validDefense = false;
+        while (validDefense == false) {
+            int defensePoints = myScan.nextInt();
+            if (defensePoints > 0 && defensePoints < MAX_HIT_POINTS - attackPoints) {
+                validDefense = true;
+            } else{
+                System.out.println("Sorry. Defense points must be between 1 and 3");
+            }
+        }
 
         return tempPokemon;
 
