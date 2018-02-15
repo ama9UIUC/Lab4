@@ -91,7 +91,7 @@ public class Colosseum {
         while (!validAttackPoints) {
             tempPokemon.attackLevel = myScan.nextInt();
             if (tempPokemon.attackLevel > 1  && tempPokemon.attackLevel <= MAX_HIT_POINTS - 1) {
-                validHitPoints = true;
+                validAttackPoints = true;
             } else{
                 System.out.println("Sorry. Attack points must be between 1 and 49");
             }
